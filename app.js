@@ -1,3 +1,9 @@
+/*
+in database access->edit->edit password->generate password.
+
+mongodb+srv://admin:<PasswordHere>@cluster0.aadt6.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+*/
+
 const express = require("express");
 const mongoose = require("mongoose");
 const router = require("./routes/book-routes");
