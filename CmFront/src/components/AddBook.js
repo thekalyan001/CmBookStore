@@ -65,7 +65,13 @@ const AddBook = () => {
         alignSelf="center"
         marginLeft={"auto"}
         marginRight="auto"
-        marginTop={10}
+        marginTop={5}
+        sx={{
+          background: "linear-gradient(45deg, #ADD8E6, #FFB6C1)", // Add a gradient background, // Set a background color
+          boxShadow: 3, // Add a shadow
+          borderRadius:2, // Optional: Add rounded corners
+          padding: 2, // Optional: Add padding
+        }}
       >
         <FormLabel>Name</FormLabel>
         <TextField
