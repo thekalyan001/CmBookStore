@@ -35,7 +35,7 @@ const AddBook = () => {
   //it's an asynchronous task to using await
   const sendRequest = async () => {
     await axios 
-      .post("http://localhost:5000/books", {
+      .post("https://cmbookstore-vv95.onrender.com/books", {
         name: String(inputs.name),
         author: String(inputs.author),
         description: String(inputs.description),

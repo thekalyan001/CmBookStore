@@ -14,7 +14,7 @@ const BookDetail = () => {
   useEffect(() => {
     const fetchHandler = async () => {
       await axios
-        .get(`http://localhost:5000/books/${id}`) //template listeral, str & var here
+        .get(`https://cmbookstore-vv95.onrender.com/books/${id}`) //template listeral, str & var here
         .then((res) => res.data) //response to data
         .then((data) => setInputs(data.book));
     };
@@ -24,7 +24,7 @@ const BookDetail = () => {
   //update the valuees
   const sendRequest = async () => {
     await axios
-      .put(`http://localhost:5000/books/${id}`, { //http://localhost:5000/
+      .put(`https://cmbookstore-vv95.onrender.com/books/${id}`, { //https://cmbookstore-vv95.onrender.com/
         name: String(inputs.name),
         author: String(inputs.author),
         description: String(inputs.description),
