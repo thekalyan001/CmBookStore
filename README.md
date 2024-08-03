@@ -1,6 +1,6 @@
 # CmBookStore
 
-<h1><a href="https://cmbookstoreback.deno.dev/"> Live Preview</a></h1>   (backend won't work as its not hosted)
+<h1><a href="https://cm-book-store-bv4s.vercel.app/"> Live Preview</a></h1>   
 
 ### By Kalyan Mishra ✔
 
