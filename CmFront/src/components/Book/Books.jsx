@@ -28,7 +28,10 @@ const Books = () => {
   return (
     <div>
       {loading ? (
-        <div className="spinner"></div> // Use spinner class for loading
+        <div className="loading-container">
+          <div className="spinner"></div> {/* Spinner */}
+          <h2 className="loading-message">Hang on tight while we're loading books</h2> {/* Loading message */}
+        </div>
       ) : (
         <ul>
           {books.map((book, i) => (
