@@ -12,7 +12,7 @@ const Book = (props) => {
   //delete te book, send delete api request using axios
   const deleteHandler = async () => { ///single async task
     await axios //wait till it delete
-      .delete(`http://localhost:5000/books/${_id}`) //http://localhost:5000/
+      .delete(`https://cmbookstore-vv95.onrender.com/books/${_id}`) //https://cmbookstore-vv95.onrender.com/
       .then((res) => res.data)
       .then(() => history("/")) //refresh the whole component
       .then(() => history("/books")); //after delete navigate to books
