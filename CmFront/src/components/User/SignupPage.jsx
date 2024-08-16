@@ -23,7 +23,7 @@ const SignupPage = () => {
   const onSubmit = async (data) => {
     try {
       console.log('data is: ', data); 
-      const response = await axios.post('http://localhost:5000/user/signup', data);
+      const response = await axios.post('https://cmbookstore-vv95.onrender.com/user/signup', data);
       console.log("response is: ", response);
 
       toast.success('Signup successful!');
