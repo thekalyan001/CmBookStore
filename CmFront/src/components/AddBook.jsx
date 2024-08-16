@@ -9,6 +9,8 @@ import { Box } from "@mui/system";
 import axios from "axios";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useSelector } from 'react-redux';
+import {  toast } from 'react-toastify';
 
 const AddBook = () => {
   const history = useNavigate();
@@ -21,6 +23,8 @@ const AddBook = () => {
     image: "",
   });
   const [checked, setChecked] = useState(false);
+  const isLoggedIn = useSelector((state) => state.loginSlice.isLoggedin);
+
 
   //on input change send the latest snapshot of the input fields
   const handleChange = (e) => {
@@ -35,7 +39,7 @@ const AddBook = () => {
   //it's an asynchronous task to using await
   const sendRequest = async () => {
     await axios 
-      .post("https://cmbookstore-vv95.onrender.com/books", {
+      .post("http://localhost:5000/books", {
         name: String(inputs.name),
         author: String(inputs.author),
         description: String(inputs.description),
@@ -47,6 +51,10 @@ const AddBook = () => {
   };
 
   const handleSubmit = (e) => {
+    if (!isLoggedIn) {
+      toast.warning("Login to submit!");
+      return;
+    }
     e.preventDefault();
     console.log(inputs, checked);
      //after send request move user to book page

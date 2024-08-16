@@ -1,0 +1,7 @@
+ 
+
+@media screen and (max-width: 560px){
+    .cardAbout{
+        flex-direction: column;
+    }
+}

@@ -1,7 +1,8 @@
 import { Box, Typography, Button, Card, CardContent, CardMedia } from "@mui/material";
 import { Link } from "react-router-dom";
 import React from "react";
-
+import './style.css';
+  
 const About = () => {
   return (
     <Box
@@ -94,7 +95,7 @@ const About = () => {
         maxWidth="1200px"
         width="100%"
       >
-        <div style={{ display: 'flex', flexDirection: 'row' }}>
+        <div className="cardAbout" style={{ display: 'flex', flexDirection: 'row' }}>
         {/* Card 1 */}
         <Card sx={{ minWidth: 300, borderRadius: '10px', margin: "20px", boxShadow: "0 2px 10px rgba(0, 0, 0, 0.1)" }}>
           <CardMedia
