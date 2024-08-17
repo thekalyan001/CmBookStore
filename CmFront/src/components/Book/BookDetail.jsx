@@ -14,7 +14,7 @@ const BookDetail = () => {
   useEffect(() => {
     const fetchHandler = async () => {
       await axios
-        .get(`https://cmbookstore-vv95.onrender.com/books/${id}`) //template listeral, str & var here
+        .get(`https://cm-book-store-jzjz.vercel.app/books/${id}`) //template listeral, str & var here
         .then((res) => res.data) //response to data
         .then((data) => setInputs(data.book));
     };
@@ -24,7 +24,7 @@ const BookDetail = () => {
   //update the valuees
   const sendRequest = async () => {
     await axios
-      .put(`https://cmbookstore-vv95.onrender.com/books/${id}`, { //https://cmbookstore-vv95.onrender.com/
+      .put(`https://cm-book-store-jzjz.vercel.app/books/${id}`, { //https://cm-book-store-jzjz.vercel.app/
         name: String(inputs.name),
         author: String(inputs.author),
         description: String(inputs.description),

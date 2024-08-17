@@ -33,7 +33,7 @@ const LoginPage = () => {
   const onSubmit = async (data) => {
     try {
       console.log('Login data:', data);
-      const response = await axios.post('https://cmbookstore-vv95.onrender.com/user/login', data);
+      const response = await axios.post('https://cm-book-store-jzjz.vercel.app/user/login', data);
       
       dispatch(changeLoginStatus({
         isLoggedin: true,

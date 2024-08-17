@@ -12,7 +12,7 @@ const Book = (props) => {
   //delete te book, send delete api request using axios
   const deleteHandler = async () => { ///single async task
     await axios //wait till it delete
-      .delete(`https://cmbookstore-vv95.onrender.com/books/${_id}`) //https://cmbookstore-vv95.onrender.com/
+      .delete(`https://cm-book-store-jzjz.vercel.app/books/${_id}`) //https://cm-book-store-jzjz.vercel.app/
       .then((res) => res.data)
       .then(() => history("/")) //refresh the whole component
       .then(() => history("/books")); //after delete navigate to books

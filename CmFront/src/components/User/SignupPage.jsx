@@ -31,7 +31,7 @@ const SignupPage = () => {
     }
 
     try {
-       await axios.post('https://cmbookstore-vv95.onrender.com/user/signup', formData, {
+       await axios.post('https://cm-book-store-jzjz.vercel.app/user/signup', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },

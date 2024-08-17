@@ -39,7 +39,7 @@ const AddBook = () => {
   //it's an asynchronous task to using await
   const sendRequest = async () => {
     await axios 
-      .post("https://cmbookstore-vv95.onrender.com/books", {
+      .post("https://cm-book-store-jzjz.vercel.app/books", {
         name: String(inputs.name),
         author: String(inputs.author),
         description: String(inputs.description),
