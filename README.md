@@ -1,6 +1,6 @@
 # CmBookStore
 
-<h1><a href="https://cm-book-store.vercel.app/"> Live Preview</a></h1>   
+<h1><a href="https://cmbookstore.netlify.app/"> Live Preview</a></h1>   
 
 ### By Kalyan Mishra ✔
 
