@@ -23,6 +23,11 @@ import { OnLogout } from '../store/slices/loginSlice';
 
 import './style.css';
 
+/**
+ * 
+ * @note: need to work on showing profile uploaded by backend.
+ */
+
 const Header = () => {
   const [value, setValue] = useState();
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -74,8 +79,8 @@ const Header = () => {
             <Tab LinkComponent={NavLink} to="/about" label="About Us" />
             {isLoggedIn ? (
               <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                <Avatar alt="User Profile" src={profilePhoto || "/path-to-your-default-image.jpg"} sx={{ marginLeft: 1, transform: 'scale(0.8)' }} />
-                <Button
+                <Avatar alt="User Profile" src={"https://th.bing.com/th/id/OIP.aMrXppKRuvRyJoicXx3uxgHaHa?w=199&h=199&c=7&r=0&o=5&dpr=1.3&pid=1.7" || profilePhoto} sx={{ marginLeft: 1, transform: 'scale(0.8)' }} />
+                 <Button
                   color="inherit"
                   onClick={handleLogout}
                   sx={{ textTransform: 'none', background: 'green', padding: '4px' }}
@@ -131,7 +136,7 @@ const Header = () => {
             </ListItem>
             {isLoggedIn ? (
               <ListItem button onClick={() => { handleLogout(); handleDrawerToggle(); }}>
-                <Avatar alt="User Profile" src={profilePhoto || "/path-to-your-default-image.jpg"} sx={{ marginRight: 1, transform: 'scale(0.8)' }} />
+                <Avatar alt="User Profile" src={"https://th.bing.com/th/id/OIP.aMrXppKRuvRyJoicXx3uxgHaHa?w=199&h=199&c=7&r=0&o=5&dpr=1.3&pid=1.7"|| profilePhoto} sx={{ marginLeft: 1, transform: 'scale(0.8)' }} />
                 <ListItemText primary="Log Out" />
               </ListItem>
             ) : (

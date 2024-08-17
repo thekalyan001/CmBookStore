@@ -60,53 +60,7 @@ const Home = () => {
         find your next great read!
       </Typography>
 
-      {/* Decorative Elements */}
-      <Box
-  sx={{
-    position: "absolute",
-    bottom: 20,
-    left: "50%",
-    transform: "translateX(-50%)",
-    zIndex: 1,
-    display: "grid",
-    gridTemplateColumns: "repeat(12, 1fr)", // 12-column grid
-    gap: 2,
-    width: '80%', 
-    marginBottom: '6rem', 
-    
-  }}
->
-  <Box
-    component="img"
-    src="https://plus.unsplash.com/premium_photo-1681681061617-183d3d3ec9c6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDV8fGJvb2tzfGVufDB8fDB8fHww=rb-4.0.3&q=50&w=200"
-    alt="Decorative Book"
-    sx={{
-      gridColumn: "span 4", // Takes up 4 columns
-      width: "70%", 
-      borderRadius: "10px", 
-    }}
-  />
-  <Box
-    component="img"
-    src="https://images.unsplash.com/photo-1481121882039-4bf1945840f8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzF8fGJvb2tzfGVufDB8fDB8fHww=rb-4.0.3&q=50&w=200"
-    alt="Decorative Book"
-    sx={{
-      gridColumn: "span 4", // Takes up 4 columns
-      width: "70%", 
-      borderRadius: "10px", 
-    }}
-  />
-  <Box
-    component="img"
-    src="https://plus.unsplash.com/premium_photo-1681681061617-183d3d3ec9c6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDV8fGJvb2tzfGVufDB8fDB8fHww=rb-4.0.3&q=50&w=200"
-    alt="Decorative Book"
-    sx={{
-      gridColumn: "span 4", // Takes up 4 columns
-      width: "70%", 
-      borderRadius: "10px",
-    }}
-  />
-</Box>
+ 
     </Box>
   );
 };

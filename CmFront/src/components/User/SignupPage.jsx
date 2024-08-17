@@ -21,16 +21,27 @@ const SignupPage = () => {
   const navigate = useNavigate();
 
   const onSubmit = async (data) => {
+    const formData = new FormData();
+    formData.append('username', data.username);
+    formData.append('password', data.password);
+
+    // Check if a file is selected
+    if (data.profilePhoto[0]) {
+      formData.append('profilePhoto', data.profilePhoto[0]);
+    }
+
     try {
-      console.log('data is: ', data); 
-      const response = await axios.post('https://cmbookstore-vv95.onrender.com/user/signup', data);
-      console.log("response is: ", response);
+       await axios.post('https://cmbookstore-vv95.onrender.com/user/signup', formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
+      });
 
       toast.success('Signup successful!');
       navigate('/login');  
     } catch (error) {
       console.error("Error during signup: ", error);
-      toast.error(error.response.data.msg); 
+      toast.error(error?.response?.data?.msg || error.message); 
     }
   };
 
@@ -58,9 +69,11 @@ const SignupPage = () => {
               {...register('password', { required: true })}
             />
             <input
+              accept='image/*'
               type="file"
-              accept="image/*"
-              {...register('photo')}
+              id="profilePhoto"
+              name="profilePhoto" 
+              {...register('profilePhoto')}
               style={{ margin: '16px 0' }}
             />
             <Button
